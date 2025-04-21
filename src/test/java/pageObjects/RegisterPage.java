@@ -33,6 +33,13 @@ public class RegisterPage extends BasePage {
 	@FindBy(xpath = "//input[@type='submit']")
 	WebElement submitBtn;
 	
+	@FindBy(xpath = "//label[text()='Yes']")
+	WebElement yesRadioBtn;
+	
+	@FindBy(xpath = "//label[text()='No']")
+	WebElement noRadioBtn;
+	
+	
 	
 	public void typeFirstname(String fn) {
 		firstnameTxt.sendKeys(fn);
@@ -64,8 +71,15 @@ public class RegisterPage extends BasePage {
         }
 	}
 	
-	public void clickSubmit() {
+	public void clickContinue() {
 		submitBtn.click();
 	}
 	
+	public void clickYesRadioBtn() {
+		yesRadioBtn.click();
+	}
+	
+	public void clickNoRadioBtn() {
+		noRadioBtn.click();
+	}
 }

@@ -1,10 +1,8 @@
 package testCases;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.By.ByLinkText;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import pageObjects.AccountSuccessPage;
 import pageObjects.HomePage;
 import pageObjects.RegisterPage;
@@ -17,8 +15,8 @@ public class TC_RF_001 extends BaseClass {
 		HomePage hp = new HomePage(driver);
 		RegisterPage rp = new RegisterPage(driver);
 		AccountSuccessPage ap = new AccountSuccessPage(driver);
-		hp.accountButton();
-		hp.registerButton();
+		hp.clickAccountButton();
+		hp.clickRegisterButton();
 		rp.typeFirstname("Selenium");
 		rp.typeLastname("testing");
 		rp.typeEmail(generateNewEmail());
@@ -26,10 +24,10 @@ public class TC_RF_001 extends BaseClass {
 		rp.typePassword("abcd");
 		rp.typePasswordConfirm("abcd");
 		rp.checkPrivacyBox();
-		rp.clickSubmit();
+		rp.clickContinue();
 		
 		String expected = "Your Account Has Been Created!";
-		Assert.assertEquals(ap.accountSuccess(), expected);
+		Assert.assertEquals(ap.accountSuccessHeading(), expected);
 		
 		String ProperDetailsOne="Congratulations! Your new account has been successfully created!";
 		String ProperDetailsTwo="You can now take advantage of member privileges to enhance your online shopping experience with us.";

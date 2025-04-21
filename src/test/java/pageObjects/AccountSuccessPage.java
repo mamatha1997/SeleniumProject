@@ -18,7 +18,7 @@ public class AccountSuccessPage extends BasePage{
 	@FindBy(xpath="//a[text()='Continue']")
 	WebElement continueBtn;
 	
-	public String accountSuccess() {
+	public String accountSuccessHeading() {
 		return successHeading.getText();
 	}
 	

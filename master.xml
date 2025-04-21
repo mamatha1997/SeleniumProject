@@ -2,8 +2,7 @@
 	<test name="Test">
 		<parameter name='browser' value="chrome" />
 		<classes>
-			<class name="testCases.TC_RF_001" />
+			<class name="testCases.TC_RF_003" />
 		</classes>
 	</test>
-
 </suite>
